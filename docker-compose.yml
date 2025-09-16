@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  rwecuimcapp:
+    image: ohdsi/comparatorselectionexplorer:1.0.0
+    env_file: .env
+    build:
+      context: .
+      args:
+        APP_NAME: ComparatorSelectionExplorer
+    ports:
+      - "3838:3838"

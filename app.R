@@ -8,6 +8,5 @@ connectionDetails <- DatabaseConnector::createConnectionDetails(
 
 resultsSchema <- "comparator_selector"
 tablePrefix <- "cse_202507_"
-app <- ComparatorSelectionExplorer::createShinyApp(connectionDetails, resultsSchema, tablePrefix)
+ComparatorSelectionExplorer::createShinyApp(connectionDetails, resultsSchema, tablePrefix)
 
-shiny::runApp(app, host = '0.0.0.0', port = 3838)

@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   rwecuimcapp:
     image: ohdsi/comparatorselectionexplorer:1.0.0

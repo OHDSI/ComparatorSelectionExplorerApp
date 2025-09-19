@@ -44,7 +44,7 @@ COPY postgresql-42.7.3.jar /root/
 RUN R -e "remotes::install_github('OHDSI/ResultModelManager', update='always')"
 # install git ref or branch
 RUN R -e "ref <- Sys.getenv('GIT_COMMIT_ID_ABBREV', unset=Sys.getenv('GIT_BRANCH')); \
-     remotes::install_github('OHDSI/ComparatorSelectionExplorer', ref=ref, update='always', dependencies = TRUE)"
+     remotes::install_github('OHDSI/ComparatorSelectionExplorer', ref='shiny_app_docker', update='always', dependencies = TRUE)"
 
 WORKDIR /srv/shiny-server/
 
